@@ -6,27 +6,22 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-
-sequelize.authenticate().then(function(){
-  console.log("Conectado");
-}).catch(function(err){
-  console.log("Falha de conexão" + err);
-});
-
-
- // Rotas 
+// Rotas 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + "/landing-page/formulario.html");
+  res.sendFile(__dirname + "/landing-page/Formulario.html");
 });
 
-// app.get('/formulario', function (req, res) {
-//   res.sendfile(__dirname + "/landing-page/formulario.html");
-// });
-
-app.post('/form', function (req, res) {
-  res.send("Nome: " + req.body.nome + "<br> Data de Nascimento: " + 
-  req.body.data_nascimento + "<br>Email: " + req.body.email + 
-  req.body.telefone);
-});
+app.post('/form', function(req, res){
+  pagamento.create({
+      nome: req.body.nome,
+      data_nascimento: req.body.data_nascimento,
+      email:req.body.email,
+      telefone: req.body.telefone
+  }).then(function(){
+      res.sendFile('/formulario')
+  }).catch(function(erro){
+      res.send("Erro: Pagamento não foi cadastrado!" + erro)
+  })
+})
  
 app.listen(3000);

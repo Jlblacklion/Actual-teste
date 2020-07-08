@@ -1,14 +1,11 @@
-const { Sequelize } = require('sequelize');
-// Conexão Sequelize
-const sequelize = new Sequelize('leads', 'root', 'Joelroot@3010', {
+const Sequelize = require("sequelize")
+
+const sequelize = new Sequelize('leads', 'root', 'Joelroot@3010',{
     host: 'localhost',
-    dialect: 'mysql',
-    define: {
-        timestamps: false
-    }
-});
+    dialect: 'mysql'
+})
 
 module.exports = {
-    Sequilize: Sequilize,
-    sequilize: sequilize,
-};
+    Sequelize: Sequelize,
+    sequelize: sequelize
+}
