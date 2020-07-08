@@ -1,7 +1,7 @@
 const db = require('./db');
 
 //Criando tbela
-const Formdb = db.sequelize.define('nometabela', { 
+const Formdb = db.sequelize.define('teste', { 
     nome :{
         type: db.Sequilize.STRING
     },
@@ -14,6 +14,8 @@ const Formdb = db.sequelize.define('nometabela', {
     telefone :{
         type: db.Sequilize.STRING
     }  
+    
 });
 
 Formdb.sync({force:true});
+//module.exports = Formdb;

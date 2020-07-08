@@ -7,6 +7,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 
+sequelize.authenticate().then(function(){
+  console.log("Conectado");
+}).catch(function(err){
+  console.log("Falha de conexão" + err);
+});
+
+
  // Rotas 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + "/landing-page/formulario.html");

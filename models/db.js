@@ -1,19 +1,14 @@
-const db = require('./db');
-
-//Criando tbela
-const Formdb = db.sequelize.define('nometabela', { 
-    nome :{
-        type: db.Sequilize.STRING
-    },
-    Data: {
-        type: db.Sequilize.STRING
-    },
-    email :{
-        type: db.Sequilize.STRING
-    },
-    telefone :{
-        type: db.Sequilize.STRING
-    }  
+const { Sequelize } = require('sequelize');
+// Conexão Sequelize
+const sequelize = new Sequelize('leads', 'root', 'Joelroot@3010', {
+    host: 'localhost',
+    dialect: 'mysql',
+    define: {
+        timestamps: false
+    }
 });
 
-Formdb.sync({force:true});
+module.exports = {
+    Sequilize: Sequilize,
+    sequilize: sequilize,
+};
