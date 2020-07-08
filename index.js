@@ -1,24 +1,11 @@
 const express = require('express');
 const app = express();
-//Banco de dados 
-const { Sequelize } = require('sequelize');
 const bodyParser = require('body-parser');
 
 //Extra 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-// Conexão Sequelize
-const sequelize = new Sequelize('leads', 'root', 'Joelroot@3010', {
-  host: 'localhost',
-  dialect: 'mysql',
-});
-
-sequelize.authenticate().then(function(){
-  console.log("Conectado");
-}).catch(function(err){
-  console.log("Falha de conexão" + err);
-});
 
  // Rotas 
 app.get('/', function (req, res) {
