@@ -1,0 +1,25 @@
+{
+  "name": "teste-fullstack",
+  "version": "1.0.0",
+  "description": "teste para vaga de emprego",
+  "main": "index.js",
+  "scripts": {
+    "test": "jm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jlblacklion"
+  },
+  "author": "Joel Manuel",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.0"
+  }
+}
