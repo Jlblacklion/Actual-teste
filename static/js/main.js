@@ -4,7 +4,7 @@ var opt_3 = new  Array ( "-", "Salvador", "Recife");
 var opt_4 = "Indisponivel";
 var opt_5 = "Brasília";
 
-function mudancaValor(){
+window.onload = function mudancaValor(){
     var mudanca;
     mudanca = document.step_2.mudanca[document.step_2.mudanca.selectedIndex].value
 
@@ -26,3 +26,5 @@ function mudancaValor(){
     }
     document.step_2.unidade.options[0].selected = true;
 }
+
+
