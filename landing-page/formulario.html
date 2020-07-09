@@ -7,7 +7,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-        <script src="/landing-page/main.js"></script>
+        <script type="text/javascript" src="./static/js/main.js"></script>
     </head>
     <body>
         <div class="container">
@@ -75,8 +75,8 @@
                                 <fieldset>
                                     <div class="row form-group">
                                         <div class="col-lg-6">
-                                            <label>Região</label>
-                                            <select class="form-control" name="regiao" id="id_regiao" onchange="mudancaValor()">
+                                            <label>Região</label> 
+                                            <select class="form-control" name="regiao" id="id_regiao" onChange="mudancaValor();">
                                                 <option value="0">Selecione a sua região</option>
                                                 <option value="1">Sul</option>
                                                 <option value="2">Sudeste</option>
@@ -88,7 +88,7 @@
 
                                         <div class="col-lg-6">
                                             <label>Unidade</label>
-                                            <select class="form-control" name="unidade" id="id_unidade">
+                                            <select class="form-control" type="text" name="unidade" id="id_unidade">
                                                 <option value="-">Selecione a unidade mais próxima</option>
                                                 <option >???</option>
                                             </select>
@@ -128,7 +128,7 @@
                     event.preventDefault();
                     $(this).parents('.form-step').hide().next().show();
                 });
-            });
+            });             
         </script>
         
     </body>

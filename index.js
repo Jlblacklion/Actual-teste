@@ -29,8 +29,4 @@ app.post('/form', function(req, res){
   });
 });
 
-// app.post('/form', function (req, res) {
-//   res.send("formulario");
-// });
-
 app.listen(3000);
