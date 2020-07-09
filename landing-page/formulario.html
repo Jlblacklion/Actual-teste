@@ -7,6 +7,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="/landing-page/main.js"></script>
     </head>
     <body>
         <div class="container">
@@ -22,7 +23,7 @@
             <div class="row">
                 <div class="col-lg-6" id="form-container">
 
-                    <form id="step_1" class="form-step" method="POST" action="form">
+                    <form id="step_1" class="form-step" method="POST" action="/form">
                         <div class="panel panel-info">
                             <div class="panel-heading">
                                 <div class="panel-title">
@@ -63,7 +64,7 @@
                         </div>
                     </form>
 
-                    <form id="step_2" class="form-step" style="display:none">
+                    <form id="step_2" class="form-step" style="display:none" name="step_2">
                         <div class="panel panel-info">
                             <div class="panel-heading">
                                 <div class="panel-title">
@@ -75,21 +76,21 @@
                                     <div class="row form-group">
                                         <div class="col-lg-6">
                                             <label>Região</label>
-                                            <select class="form-control" name="regiao">
-                                                <option value="">Selecione a sua região</option>
-                                                <option>Sul</option>
-                                                <option>Sudeste</option>
-                                                <option>Centro-Oeste</option>
-                                                <option>Nordeste</option>
-                                                <option>Norte</option>
+                                            <select class="form-control" name="regiao" id="id_regiao" onchange="mudancaValor()">
+                                                <option value="0">Selecione a sua região</option>
+                                                <option value="1">Sul</option>
+                                                <option value="2">Sudeste</option>
+                                                <option value="3">Centro-Oeste</option>
+                                                <option value="4">Nordeste</option>
+                                                <option value="5">Norte</option>
                                             </select>
                                         </div>
 
                                         <div class="col-lg-6">
                                             <label>Unidade</label>
-                                            <select class="form-control" name="unidade">
-                                                <option value="">Selecione a unidade mais próxima</option>
-                                                <option>???</option>
+                                            <select class="form-control" name="unidade" id="id_unidade">
+                                                <option value="-">Selecione a unidade mais próxima</option>
+                                                <option >???</option>
                                             </select>
                                         </div>
                                     </div>
@@ -129,5 +130,6 @@
                 });
             });
         </script>
+        
     </body>
 </html>

@@ -17,6 +17,6 @@ const Formdb = db.sequelize.define('usuarios', {
     
 });
 
-Formdb.sync({force:true});
+//Formdb.sync({force:true});
 module.exports = Formdb;
 
