@@ -1,46 +1,32 @@
 
-# Venha trabalhar na ActualSales!
+# Projeto está sendo feito em node js e Javascript!
 
-## A Empresa
+Comece baixando o projeto no seguinte link:https://github.com/Jlblacklion/Actual-teste
 
-A ActualSales é uma empresa de marketing digital focada em geração de leads através de Landing Pages.
+Descompacte, abre em um editor de código. use o terminal, dê o seguinte comando "node index" ou "nodemon index.js" estando na pasta do projeto:
+cd + diretório + (node index.js)
 
-## Vagas
----
-### FullStack Developer
-Precisamos de alguém com um bom conhecimento em programação e muita vontade colocar a mão na massa. Topa?
+Abra o navegador e busca da seguinte forma: http://localhost:3000/
 
-#### Requisitos:
-* Lógica de programação
-* Ter um bom conhecimento de pelo menos uma linguagem de programação (PHP,Javascript,Python,Java,Ruby etc.)
-* Conhecimento em pelo menos um dos bancos de dados na lista a seguir: MySQL, PostGRE, MsSQL, MariaDB, Mongo
-* Git 
-* Vontade de aprender, inovar e compartilhar conhecimento.
+## Mais especificações
 
-#### Diferenciais:
-* Ter seus próprios projetos
-* Colaboração em OpenSource
-* Saber escrever testes
-* DevOps
+Foi-se incluido dependências para se trabalhar com molulos node, banco de dados, rotas, etc, para fazer requisições do tiopo "Get , Post". Estão no arquivo: package.json
 
+#### banco de dados
+Foi usado o banco de dados Mysql.
+Para criar tabelas automatizadas no banco deve-se rodar o arquivo: "Formulariodb.js" da pasta (models). cd + diretório + (node Formulariodb.js)
 
-#### Como me candidatar?
-Envie o seu currículo para vagas-ti@actualsales.com.br
-Faça o teste técnico. (Abaixo)
+Mais antes deve descomentar a seguinte linha: //Formdb.sync({force:true});
+no arquivo "Formulariodb.js"
 
-#### Teste técnico
-Elaboramos um pequeno teste de aptidões que pode ser realizado no seu tempo.
-As instruções para execução desse teste estão localizadas *na pasta* **landing-page** desse mesmo repositório.
+no arquivo "db.js" colocar os dados referentes: 'dbname', 'user', 'password
 
----
+#### Alterações no arquivo Recebido: 
+"Index.html" Mudou-se o nome para "formulario.html".
+Foi-se incluso nos formularios interno "names e id's", na Head um script de uma pagina Javascript: (static/js/main.js)
 
-#### Oferecemos:
-- (VR || VA) && VT
-- Plano de saúde e dental
-- Bônus mensal por performance
+Na pasta "models" contem os arquivos de banco, conexão e criação da tabela.
 
-#### Dúvidas
-Para dúvidas ou mais informações, fique à vontade para nos contactar através do email <vagas-ti@actualsales.com.br>.
+Na pasta "static" estão os arquivos estaticos.
 
-
-## Obrigado e boa sorte!
+## Obrigado!
